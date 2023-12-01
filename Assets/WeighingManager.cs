@@ -17,10 +17,13 @@ public class WeighingManager : MonoBehaviour
 
       if (TheScenesManager.PlayerA == true) {
         PartnersRealNumber = LevelManagement.selectedHieroglyph - TheScenesManager.GameSpecifics[2 * TheScenesManager.round - 1];
-        Debug.Log("Partner's Real Number was: " + PartnersRealNumber);
+        if (PartnersRealNumber < 0) {PartnersRealNumber = PartnersRealNumber + 8;}
+        Debug.Log("Partner (B) - their Real Number was: " + PartnersRealNumber);
       }
       else {
         PartnersRealNumber = LevelManagement.selectedHieroglyph - TheScenesManager.GameSpecifics[2 * TheScenesManager.round - 2];
+        if (PartnersRealNumber < 0) {PartnersRealNumber = PartnersRealNumber + 8;}
+        Debug.Log("Partner (A) - their Real Number was: " + PartnersRealNumber);
       }
      
       ; 
@@ -35,7 +38,7 @@ public class WeighingManager : MonoBehaviour
         scorePartner = TemporaryStorage;
       }
       if (LevelManagement.YourConfessionsNumber < PartnersRealNumber) {
-        scorePartner = scorePartner + LevelManagement.YourConfessionsNumber;
+        scorePartner = scorePartner + PartnersRealNumber;
         scoreYou = scoreYou + 7;
       }
 

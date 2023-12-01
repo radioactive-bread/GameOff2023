@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerB.unity
     guid: d22be39d6df357144b97679e5443dac2
+  - enabled: 1
+    path: Assets/Scenes/End-Tie.unity
+    guid: ebcddc6584eec004989814de1540a782
+  - enabled: 1
+    path: Assets/Scenes/Tutorial2.unity
+    guid: 53a43281a28e9d147b2cf7b97cb8fd9b
   m_configObjects: {}

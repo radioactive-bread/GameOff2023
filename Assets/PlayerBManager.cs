@@ -28,6 +28,6 @@ public class PlayerBManager : MonoBehaviour
             }
         }
 
-        Debug.Log(TheScenesManager.GameSpecifics[0] + "," + TheScenesManager.GameSpecifics[1] +"," + TheScenesManager.GameSpecifics[2]);
+        /*Debug.Log(TheScenesManager.GameSpecifics[0] + "," + TheScenesManager.GameSpecifics[1] +"," + TheScenesManager.GameSpecifics[2]);*/
     }
 }

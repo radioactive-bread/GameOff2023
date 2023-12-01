@@ -22,9 +22,7 @@ public class TheScenesManager : MonoBehaviour
     }
 
     public void LoadWeighingScene() {
-
-        if (round < 6) {SceneManager.LoadScene("WeighingScene");}
-        else {SceneManager.LoadScene("FinalJudgment");}
+        SceneManager.LoadScene("WeighingScene");
     }
     
     public void LoadMenu() {
@@ -32,8 +30,20 @@ public class TheScenesManager : MonoBehaviour
     }
 
     public void LoadLevelScene() {
-        SceneManager.LoadScene("LevelScene");
+        if (round < 6) {SceneManager.LoadScene("LevelScene");}
+        else {
+            SceneManager.LoadScene("FinalJudgement");
+        }
     }
+
+    public void LoadTutorial() {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void LoadTutorial2() {
+        SceneManager.LoadScene("Tutorial2");
+    }
+
 
     
 
