@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalJudgement.unity
     guid: f8246df0671f98d42a12fde42e96a10d
+  - enabled: 1
+    path: Assets/Scenes/PlayerA.unity
+    guid: 54ea0f7a8f99b2440bef00f3ae0a4abb
+  - enabled: 1
+    path: Assets/Scenes/PlayerB.unity
+    guid: d22be39d6df357144b97679e5443dac2
   m_configObjects: {}

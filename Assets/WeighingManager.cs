@@ -13,9 +13,17 @@ public class WeighingManager : MonoBehaviour
     void Start()
     {
       Debug.Log("YourConfessionsNumber = " + LevelManagement.YourConfessionsNumber + " & Partner = " + LevelManagement.selectedHieroglyph); 
-      // check who's playing and
+      // check who's playing and find out what your partners real number was
+
+      if (TheScenesManager.PlayerA == true) {
+        PartnersRealNumber = LevelManagement.selectedHieroglyph - TheScenesManager.GameSpecifics[2 * TheScenesManager.round - 1];
+        Debug.Log("Partner's Real Number was: " + PartnersRealNumber);
+      }
+      else {
+        PartnersRealNumber = LevelManagement.selectedHieroglyph - TheScenesManager.GameSpecifics[2 * TheScenesManager.round - 2];
+      }
      
-      PartnersRealNumber = LevelManagement.selectedHieroglyph; 
+      ; 
       // actual weighing
       if (LevelManagement.YourConfessionsNumber > PartnersRealNumber) {
         scoreYou = scoreYou + LevelManagement.YourConfessionsNumber;

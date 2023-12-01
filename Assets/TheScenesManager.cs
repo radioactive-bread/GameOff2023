@@ -6,10 +6,20 @@ using UnityEngine.SceneManagement;
 public class TheScenesManager : MonoBehaviour
 {
     public static int round; 
-    public static int[] GameSpecifics = {1, 6, 3, 4, 5, 6, 3, 3, 1, 7, 5, 4};
+    public static int[] GameSpecifics = {1, 6, 3, 4, 5, 6, 3, 2, 1, 7, 5, 4};
+ 
+    public static bool PlayerA = true;
 
-    public static bool PlayerA = true; 
 
+    public void clickedPlayerA() {
+        PlayerA = true;
+        SceneManager.LoadScene("PlayerA");
+    }
+
+    public void clickedPlayerB() {
+        PlayerA = false;
+        SceneManager.LoadScene("PlayerB");
+    }
 
     public void LoadWeighingScene() {
 
@@ -24,6 +34,8 @@ public class TheScenesManager : MonoBehaviour
     public void LoadLevelScene() {
         SceneManager.LoadScene("LevelScene");
     }
+
+    
 
 
 }
